@@ -1,7 +1,14 @@
+import Topbar from '@/components/ui/layout/Topbar'
+
 export default function HomeLayout({
 	children,
 }: {
 	children: React.ReactNode
 }) {
-	return <>{children}</>
+	return (
+		<>
+			<Topbar />
+			{children}
+		</>
+	)
 }
