@@ -15,6 +15,7 @@ import RichEditor from '@/components/custom/RichEditor'
 import FileUpload from '../custom/FileUpload'
 import Delete from '@/components/custom/Delete'
 import PublishButton from '@/components/custom/PublishButton'
+import ResourceForm from './ResourceForm'
 import { Button } from '@/components/ui/button'
 import {
 	Form,
@@ -212,6 +213,8 @@ export default function EditSectionForm({
 					</div>
 				</form>
 			</Form>
+
+			<ResourceForm section={section} courseId={courseId} />
 		</>
 	)
 }
