@@ -4,8 +4,8 @@ import { auth } from '@clerk/nextjs/server'
 
 import { db } from '@/lib/db'
 import { DataTable } from '@/components/custom/DataTable'
-import { Button } from '@/components/ui/button'
 import { columns } from '@/components/courses/Columns'
+import { Button } from '@/components/ui/button'
 
 export default async function CoursesPage() {
 	const { userId } = auth()
