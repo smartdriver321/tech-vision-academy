@@ -14,6 +14,7 @@ import PublishButton from '../custom/PublishButton'
 import Delete from '../custom/Delete'
 import RichEditor from '../custom/RichEditor'
 import { ComboBox } from '../custom/ComboBox'
+import FileUpload from '../custom/FileUpload'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
@@ -245,9 +246,16 @@ export default function EditCourseForm({
 						render={({ field }) => (
 							<FormItem className='flex flex-col'>
 								<FormLabel>
-									Couse Banner <span className='text-red-500'>*</span>
+									Course Banner <span className='text-red-500'>*</span>
 								</FormLabel>
-								<FormControl>FileUpload</FormControl>
+								<FormControl>
+									<FileUpload
+										value={field.value || ''}
+										onChange={(url) => field.onChange(url)}
+										endpoint='courseBanner'
+										page='Edit Course'
+									/>
+								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
