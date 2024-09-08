@@ -43,7 +43,7 @@ export default function PublishButton({
 		} catch (err) {
 			toast.error('Something went wrong!')
 			console.log(
-				`Failed to ${isPublished ? 'Unpublish' : 'Publish'} ${page}`,
+				`Failed to ${isPublished ? 'unpublish' : 'publish'} ${page}`,
 				err
 			)
 		} finally {

@@ -21,6 +21,9 @@ export default async function CourseBasicsPage({
 			id: params.courseId,
 			instructorId: userId,
 		},
+		include: {
+			sections: true,
+		},
 	})
 
 	if (!course) {
@@ -46,6 +49,7 @@ export default async function CourseBasicsPage({
 		course.levelId,
 		course.imageUrl,
 		course.price,
+		course.sections.some((section) => section.isPublished),
 	]
 	const requiredFieldsCount = requiredFields.length
 	const missingFields = requiredFields.filter((field) => !Boolean(field))
