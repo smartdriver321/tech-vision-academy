@@ -38,12 +38,12 @@ export default function PublishButton({
 				? await axios.post(`${url}/unpublish`)
 				: await axios.post(`${url}/publish`)
 
-			toast.success(`${page} ${isPublished ? 'unpublished' : 'published'}`)
+			toast.success(`${page} ${isPublished ? 'Unpublished' : 'published'}`)
 			router.refresh()
 		} catch (err) {
 			toast.error('Something went wrong!')
 			console.log(
-				`Failed to ${isPublished ? 'unpublish' : 'publish'} ${page}`,
+				`Failed to ${isPublished ? 'Unpublish' : 'Publish'} ${page}`,
 				err
 			)
 		} finally {
