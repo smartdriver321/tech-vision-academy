@@ -3,6 +3,7 @@ import { auth } from '@clerk/nextjs/server'
 
 import { db } from '@/lib/db'
 import Topbar from '@/components/layout/Topbar'
+import CourseSideBar from '@/components/layout/CourseSideBar'
 
 export default async function CourseDetailsLayout({
 	children,
@@ -41,6 +42,8 @@ export default async function CourseDetailsLayout({
 		<div className='h-full flex flex-col'>
 			<Topbar />
 			<div className='flex-1 flex'>
+				<CourseSideBar course={course} studentId={userId} />
+
 				<div className='flex-1'>{children}</div>
 			</div>
 		</div>
