@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation'
 import { auth } from '@clerk/nextjs/server'
 
-import Topbar from '@/components/ui/layout/Topbar'
-import Sidebar from '@/components/ui/layout/Sidebar'
+import Topbar from '@/components/layout/Topbar'
+import Sidebar from '@/components/layout/Sidebar'
 
 export default function InstructorLayout({
 	children,

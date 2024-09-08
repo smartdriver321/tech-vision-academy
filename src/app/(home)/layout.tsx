@@ -1,4 +1,4 @@
-import Topbar from '@/components/ui/layout/Topbar'
+import Topbar from '@/components/layout/Topbar'
 
 export default function HomeLayout({
 	children,
